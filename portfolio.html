@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!----------CSS------------>
+<link rel="stylesheet" type="text/css" href="sushant.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+ 
+  </head>
+
+<body>
+  <!------Header--------->
+   <div class="header">
+  <div class="headerText">
+    <h2 class="text-light">Sushant Raman Pokharel</h2>
+    <h4>
+    <div class="words"> 
+      <span></span>
+    </div> 
+  </h4> 
+  </div> 
+</div>
+<!--------Header Closed--------->
+
+<!----------Navigation----------->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+     <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html #about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Contact</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!----------Navigationv Closed----------->
+
+<!---------Categories--------->
+<div class="categories">
+  <span>
+    <cite class="light">All</cite>
+    <cite>Photos</cite>
+    <cite>Albums</cite>
+  </span>
+</div>
+<!---------Categories Closed--------->
+
+<!------Categories Contents------->
+<!--------------->
+
+<div id="pic-album">
+  <div class="row" >
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picG.jpeg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picH.jpeg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picL.jpeg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picO.jpeg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picK.jpeg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picN.jpeg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picJ.jpeg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picI.jpeg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Photos">
+      <a href=""><img src="picM.jpeg"></a>
+    </div>
+    
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Albums">
+      <a href=""><img src="albumA.jpg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Albums">
+      <a href=""><img src="albumB.jpg"></a>
+    </div>
+    <div id="photos" class="col-lg-4 col-md-4 col-12 mt-5 mb-2" data-id="Albums">
+      <a href=""><img src="albumC.jpg"></a>
+    </div>
+  </div> 
+</div>    
+<!------Categories Contents Closed------->
+
+ <!--------Footer--------->
+ <footer class="footer">
+   &copy; 2021 All right reserved | Developer : <a href="">Rhythm Niraula</a>
+ </footer>
+ <!--------Footer Closed--------->
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+ <!----------Javascript------------->
+ <script type="text/javascript">
+  const buttons = document.querySelectorAll("cite");
+  const section = document.querySelectorAll("#photos");
+    buttons.forEach(item =>{
+       item.addEventListener('click', ()=>{
+           buttons.forEach(item =>{
+                item.className = "";
+           });
+             item.className = "light";
+             // Show Contents
+             let values = item.textContent;
+             section.forEach(show =>{
+              show.style.display = "none";
+              if(show.getAttribute("data-id") === values || values === "All"){
+                  show.style.display = "block";
+              }
+
+             });
+       });
+    });
+
+ </script>
+
+</body>
+</html>

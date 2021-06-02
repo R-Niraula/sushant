@@ -1,0 +1,242 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+/*-----Follow-----*/
+.followme{
+	margin:30px 0px 50px 0px;
+	float: left;
+}
+ .followme a{
+ 	background-color: white;
+	/*margin:0px 0px 0px 0px;
+	background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)); 
+	padding: 4px 10px;
+	color: none; */
+	display: block;
+	margin:0px 0px 10px 0px;
+    color:black;
+    padding:8px 10px; 
+    border-radius: 50%;
+}
+.followme i{
+
+	margin:0px 0px 0px 0px;
+	font-size: 20px;
+}
+
+/*-----Follow Closed-----*/
+
+/*-----Header & Navs------*/
+.header{
+	background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('picS.jpg');
+	transform-origin: left bottom;
+	transform: skewY(-2.8deg);
+    text-align: center;
+    padding: 270px 0px 300px 0px;
+}
+.headerText{
+    font-family:monospace; 
+	transform: skewY(2.8deg);
+}
+.headerText h4{
+	width: 200px;
+	height: 30px;
+	margin:auto;
+	color: black;
+	background-color: white;
+	font-weight: bold;
+	text-align: center;
+	border:1px solid white;
+    overflow: hidden;
+}
+
+.words span:after{
+	content: 'Photographer';
+	animation: change 3s infinite;
+
+}
+
+@keyframes change{
+	50%{
+		content: 'Hip-Hop Artist';
+	}
+}
+
+/*-----Header & Navs Closed------*/
+
+/*--------Navigation---------*/
+.navbar{
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: 40% 60%;
+}
+.nav ul{
+	padding-left:20px; 
+	display:flex;
+}
+.nav ul li{
+	padding: 2px 15px;
+	list-style: none;
+}
+.nav ul li a{
+	text-decoration: none;
+	padding: 4px 8px;
+	color: black;
+	}
+.nav ul li a:hover{
+	background-color:#80808040;
+}
+.btn .burger{
+	font-size: 22px;
+	display:none;
+}
+.btn{
+	float: right;
+	
+}
+.menu i{
+   font-size: 22px;
+   display:none;
+
+}
+
+/*--------Navigation Closed---------*/
+
+/*--------About--------*/
+.about{
+	padding: 20px 50px 50px 50px;
+	margin-top: 130px;
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+
+.about img{
+	width: 95%;
+	height: auto;
+}
+.aboutContent{
+	text-align: justify;
+}
+.aboutContent p{
+	font-family: poppins;
+}
+#go{
+	margin-top: 20px;
+	background-color: white;
+	padding: 0px 8px;
+	border-radius: 10px;
+	border:2px solid black;
+	display: none;
+}
+#dots{
+	display: none;
+}
+
+/*--------About Closed--------*/
+
+/*---------Footer----------*/
+.footer{
+	margin-top: 30px;
+	background-color:#8080802b;
+	padding: 30px;
+}
+.footer a{
+	text-decoration: none;
+	color: black;
+}
+
+/*---------Footer Closed----------*/
+
+/*--------Portfolio--------*/
+#pic-album{
+	text-align: center;
+}
+#pic-album img{
+	width: 200px;
+	height: auto;
+}
+.categories{
+	margin:50px 0px 50px 0px;
+	text-align: center;
+}
+.categories span{
+	display: inline-block;
+}
+cite{
+	cursor: pointer;
+	padding: 4px 10px;
+}
+.light{
+    background-color:#8080804a;
+}
+cite:hover{
+	background-color:#8080804a;
+}
+
+/*--------Portfolio Closed--------*/
+
+
+
+/*----------Media----------*/
+@media only screen and (max-width: 900px){
+	.about{
+		padding: 20px 20px 50px 20px;
+		margin-top: 50px;
+    }
+    .header{
+    	background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('picB.jpg');
+    	padding: 190px 0px 240px 0px;
+    }
+    .followme{
+	    margin:5px 0px 50px 0px;
+    }
+    .about{
+    	text-align: center;
+        display: grid;
+	    grid-template-columns: 100%;
+    }
+    .about .picture{
+    	margin-bottom: 10px;
+    }
+    .about .picture img{
+    	width: 35%;
+    	height: auto;
+    }
+    #more{
+    	display: none;
+    }
+    #dots{
+    	display: initial;
+    }
+    #go{
+    	display: initial;
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+	.header{
+		background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('picZ.jpg');
+		padding: 150px 0px 220px 0px;
+	}
+	.followme{
+	    margin:5px 0px 50px 0px;
+    }
+    .followme a{
+	    margin:0px 0px 7px 0px;
+    }
+	.about .picture img{
+    	width: 60%;
+    	height: auto;
+    }
+    .post-content{
+    	padding: 0px 6px;
+        margin-bottom: 100px;
+    }
+    .post-content img{
+        width: 80%;
+        height: 60%;
+    }
+}
